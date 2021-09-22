@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Spa_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'mainapp-ui/build'],
+        'DIRS': [BASE_DIR ,'mainapp-ui/build'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,4 +123,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = 'static'
+STATICFILES_DIRS = ['mainapp-ui/build/static']
